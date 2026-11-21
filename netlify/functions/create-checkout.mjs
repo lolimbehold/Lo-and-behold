@@ -9,8 +9,8 @@ const SIZES = {
   classic:   { name: '8"×10" Oil Pastel Portrait', price: 175 },
   statement: { name: '11"×14" Oil Pastel Portrait', price: 250 },
 };
-const SECOND_PET_FEE = 65;
-const PEOPLE_FEES = { 0: 0, 1: 85, 2: 150 };
+const SECOND_PET_FEE = 50;
+const PEOPLE_FEES = { 0: 0, 1: 60, 2: 110 };
 
 const json = (body, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json" } });
