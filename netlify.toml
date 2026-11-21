@@ -1,0 +1,4 @@
+# Lo & Behold: static site + one Netlify Function for Stripe Checkout
+[build]
+  publish = "."
+  functions = "netlify/functions"
