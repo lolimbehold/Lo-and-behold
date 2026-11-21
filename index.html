@@ -577,7 +577,7 @@ h1,h2,h3,.section-title,.hand,.piece__title,.size__dim,.size__price,.total__amt,
     <div class="getting reveal">
       <h2 id="gettingTitle">What You're Getting</h2>
       <ul class="sparkles">
-        <li style="--i:0"><svg class="star" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2c1.6 7.6 4.6 12 18 18-13.4 6-16.4 10.4-18 18-1.6-7.6-4.6-12-18-18 13.4-6 16.4-10.4 18-18z" fill="#FF4F9A" stroke="#201A3D" stroke-width="2.5" stroke-linejoin="round"/></svg><span>Hand-drawn, start to finish</span></li>
+        <li style="--i:0"><svg class="star" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2c1.6 7.6 4.6 12 18 18-13.4 6-16.4 10.4-18 18-1.6-7.6-4.6-12-18-18 13.4-6 16.4-10.4 18-18z" fill="#FF4F9A" stroke="#201A3D" stroke-width="2.5" stroke-linejoin="round"/></svg><span>Hand-drawn</span></li>
         <li style="--i:1"><svg class="star" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2c1.6 7.6 4.6 12 18 18-13.4 6-16.4 10.4-18 18-1.6-7.6-4.6-12-18-18 13.4-6 16.4-10.4 18-18z" fill="#2E59D1" stroke="#201A3D" stroke-width="2.5" stroke-linejoin="round"/></svg><span>Artist-grade oil pastels</span></li>
         <li style="--i:2"><svg class="star" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2c1.6 7.6 4.6 12 18 18-13.4 6-16.4 10.4-18 18-1.6-7.6-4.6-12-18-18 13.4-6 16.4-10.4 18-18z" fill="#C9D63B" stroke="#201A3D" stroke-width="2.5" stroke-linejoin="round"/></svg><span>Acid-free paper</span></li>
         <li style="--i:3"><svg class="star" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2c1.6 7.6 4.6 12 18 18-13.4 6-16.4 10.4-18 18-1.6-7.6-4.6-12-18-18 13.4-6 16.4-10.4 18-18z" fill="#FFC93C" stroke="#201A3D" stroke-width="2.5" stroke-linejoin="round"/></svg><span>Sealed with a protective oil pastel fixative</span></li>
@@ -650,7 +650,7 @@ h1,h2,h3,.section-title,.hand,.piece__title,.size__dim,.size__price,.total__amt,
       <input type="radio" name="pets" id="pets1" value="1" checked />
       <label for="pets1">1 Pet<small>Included</small></label>
       <input type="radio" name="pets" id="pets2" value="2" />
-      <label for="pets2">2 Pets<small>+$65</small></label>
+      <label for="pets2">2 Pets<small>+$50</small></label>
       <span class="slider" aria-hidden="true"></span>
     </div>
 
@@ -659,9 +659,9 @@ h1,h2,h3,.section-title,.hand,.piece__title,.size__dim,.size__price,.total__amt,
       <input type="radio" name="people" id="people0" value="0" checked />
       <label for="people0">No people<small>Just the pet(s)</small></label>
       <input type="radio" name="people" id="people1" value="1" />
-      <label for="people1">1 Person<small>+$85</small></label>
+      <label for="people1">1 Person<small>+$60</small></label>
       <input type="radio" name="people" id="people2" value="2" />
-      <label for="people2">2 People<small>+$150</small></label>
+      <label for="people2">2 People<small>+$100</small></label>
       <span class="slider" aria-hidden="true"></span>
     </div>
 
@@ -696,18 +696,18 @@ h1,h2,h3,.section-title,.hand,.piece__title,.size__dim,.size__price,.total__amt,
       <div class="row-2">
         <div class="field-row" id="f-pet">
           <label for="petName">Pet's name(s)</label>
-          <input type="text" id="petName" name="petName" placeholder="e.g. Waffles" autocomplete="off" />
+          <input type="text" id="petName" name="petName" placeholder="e.g. Gary" autocomplete="off" />
           <div class="err-msg">Please tell me who I'm drawing!</div>
         </div>
         <div class="field-row" id="f-email">
           <label for="email">Your email</label>
           <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" />
-          <div class="err-msg">I'll need a valid email to send your sketch preview.</div>
+          <div class="err-msg">I'll need a valid email to send you order updates.</div>
         </div>
       </div>
 
       <div class="field-row" id="f-photo">
-        <span class="label">Reference photo <span class="hint">(a clear, bright photo where I can see their eyes)</span></span>
+        <span class="label">Reference photo</span>
         <label class="drop" id="drop">
           <input type="file" id="photo" name="photo" accept="image/*" />
           <span class="drop__icon">📸</span>
@@ -753,7 +753,7 @@ h1,h2,h3,.section-title,.hand,.piece__title,.size__dim,.size__price,.total__amt,
       </div>
 
       <button type="submit" class="btn btn--xl btn--block">Proceed to Checkout 🔒</button>
-      <p class="secure">Secure checkout powered by Stripe · You'll see a sketch before I start the final piece</p>
+      <p class="secure">Secure checkout powered by Stripe</p>
     </form>
   </div>
 </section>
@@ -815,8 +815,8 @@ const SIZES = [
   { id:"classic",   dim:'8"×10"',  price:175, w:8,  h:10, desc:"Our most-loved size. Fits any standard frame.", popular:true },
   { id:"statement", dim:'11"×14"', price:250, w:11, h:14, desc:"Big, bold & full of texture. Made to be the star of the room." },
 ];
-const SECOND_PET_FEE = 65;
-const PEOPLE_FEES = { 0:0, 1:85, 2:150 };   // add a person (or two) to the portrait
+const SECOND_PET_FEE = 50;
+const PEOPLE_FEES = { 0:0, 1:60, 2:100 };   // add a person (or two) to the portrait
 
 /* Lo's paintings, embedded once so the page stays a single file.
    To swap in a hosted image instead, replace a value with a URL like "photos/ken.jpg". */
