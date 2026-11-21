@@ -10,7 +10,7 @@ const SIZES = {
   statement: { name: '11"×14" Oil Pastel Portrait', price: 250 },
 };
 const SECOND_PET_FEE = 50;
-const PEOPLE_FEES = { 0: 0, 1: 60, 2: 110 };
+const PEOPLE_FEES = { 0: 0, 1: 60, 2: 100 };
 
 const json = (body, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json" } });
